@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      .l1{
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        line-height: 160px;
+        text-align: center;
+        background: -webkit-linear-gradient(right top,pink,yellow,green);  
+      }
+      .l2{
+          widows: 100px;
+          height: 100px;
+          border-radius: 50px;
+          background: #cccccc;
+          border: 5px dashed #000000;
+          padding: 10px;
+          text-align: center;
+          box-sizing: border-box;
+      }
+    </style>
+  
+</head>
+<body>
+   <header>
+       <span>啦啦啦啦</span>
+       <div class="l1">嘟嘟嘟</div>
+       <div class="l2">啦啦啦</div>
+
+       <button>1</button>
+       <button>2</button>
+       <button>3</button>
+       <button>4</button>
+       
+   </header> 
+</body>
+</html>  
+<script>
+     var str='k';
+     console.log(Number(str));
+     console.log(parseInt(str));
+     function sum(a,b,c) {
+     // console.log(arguments)// 实参集合（实际的参数 集合）
+     var total=0;
+     for(var i=0; i < arguments.length; i++){
+     console.log(arguments[i]);
+    //  total += arguments[i];
+    total =total + arguments[i];
+     }
+     return total;
+     }
+        var q=sum(1,2,);
+        console.log(q);
+        
+        var a = 1 || 2;
+        var b = 1 && 2;
+        console.log(a,b);
+
+        var a = 0 || 2;//0 false，对于 || 来说，前面成立给前面，前面不成路给后面
+        var b = 0 && 2;//对于&& 来说，前面成立给后面，前面不成立给前面
+        console.log(a,b);
+
+        var c = 0 || sum(1,2,3);
+        console.log(c);       
+         
+         console.log([] == false);//true
+         console.log(![] == false);//true
+
+          console.log('0'==0)
+          //'0'! == 1
+          //'0'  ==1
+
+          var name='嘟嘟',age=10;
+          console.log('我的名字是'+name+'我的年龄是'+age);
+
+          var name='嘟嘟',age=10;
+          var str=`我的名字是${name}我的年龄是${age}`;
+          console.log(str);//es6   左上角的反字符号
+
+          var str2='123\wtrd';//若想用单引号包含单引号，我们需要用\把字符串中的单引号转义
+
+         //number类型 
+         NaN == NaN //false  结果永远不相等
+         Number();
+         parseInt();
+         parseFloat();
+
+         1/'a'
+         isNaN(1/'a')//判断参数是否是NaN 若是则返回true,若否则返回false;
+
+         null == undefined;//true
+         null === undefined;//false
+
+         typeof(1) //查看数据类型用的  ，返回结果是个字符串
+         var  s = typeof typeof 1//'string'
+         typeof   typeof  typeof 12//'string'
+
+         //boolean
+         //Boolean   !    !!
+
+         Number([1]);
+
+        //  var ary [i];
+        //  ary.toString();
+ 
+         var obj = {name:'ddu',age:''};
+         console.log(obj.name)
+         //对象中获取属性值的两种方式  一种是打点  一种是[] 中括号的这种方式一般适用于属性值是通过变量获取的情况 
+
+        // str.__proto__
+
+        var oBtns = document.getElementsByTagName('button');
+        console.log(oBtns);
+      
+        for(var i = 0; i < oBtns.length; i++){
+        oBtns[i].onclick = function () {
+              alert(this.innerHTML);
+        }
+        } 
+        // oBtns[0].onclick = function () {
+        // alert(1)
+        // }
+        // oBtns[1].onclick = function () {
+        // alert(2)
+        // }
+        // oBtns[2].onclick = function () {
+        // alert(3)
+        // }
+        // oBtns[3].onclick = function () {
+        // alert(4)
+        // }
+        
+    </script>
